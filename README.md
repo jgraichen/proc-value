@@ -42,6 +42,8 @@ Or install it yourself as:
 
 See example above.
 
+You can also use `Proc.val(proc_or_object)` that does not depend on any injected method and only looks if given object implements a `#call` method or not.
+
 ## Contributing
 
 1. Fork it
