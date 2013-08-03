@@ -46,5 +46,23 @@ describe 'Proc::Value' do
         expect(subject).to be === sample
       end
     end
+
+    context '.val' do
+      context 'with block' do
+        subject { Proc.val(block) }
+
+        it 'should evaluate block' do
+          expect(subject).to be === sample
+        end
+      end
+
+      context 'with object' do
+        subject { Proc.val(sample) }
+
+        it 'should evaluate block' do
+          expect(subject).to be === sample
+        end
+      end
+    end
   end
 end
