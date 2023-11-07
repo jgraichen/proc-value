@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Proc
   module ValueClassPatch
     # Evaluate block if block is given or return
@@ -40,7 +42,7 @@ class Proc
     #   config_option = proc { "#{lazy_var}/path/to/file.rb" }
     #   config_option.value.to_s
     #
-    def value(*args)
+    def value(*_args)
       self
     end
   end
@@ -49,4 +51,4 @@ class Proc
   extend ValueClassPatch
 end
 
-Object.send :include, Proc::ValueObjectPatch
+Object.include Proc::ValueObjectPatch

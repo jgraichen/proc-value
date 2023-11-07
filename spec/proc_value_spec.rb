@@ -1,66 +1,64 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'Proc::Value' do
-
-  it 'should allow transparent usage of blocks' do
+  it 'allows transparent usage of blocks' do
     option1 = 'path/to/file.rb'
     expect(option1.value.to_s).to be == 'path/to/file.rb'
 
     option2 = proc { 'path/to/file.rb' }
     expect(option2.value.to_s).to be == 'path/to/file.rb'
 
-    option3 = lambda { 'path/to/file.rb' }
+    option3 = -> { 'path/to/file.rb' }
     expect(option3.value.to_s).to be == 'path/to/file.rb'
   end
 
-  context 'Object' do
-    let(:sample) { Object.new }
-    subject { sample }
+  describe 'Object' do
+    subject(:sample) { Object.new }
 
-    it 'should have #value method' do
-      expect(subject).to respond_to(:value)
+    it 'has #value method' do
+      expect(sample).to respond_to(:value)
     end
 
-    context '#value' do
-      subject { sample.value }
-
-      it 'should return same object' do
-        expect(subject).to be === subject
+    describe '#value' do
+      it 'returns same object' do
+        expect(sample.value).to be sample
       end
     end
   end
 
-  context 'Proc' do
-    let(:sample) { Object.new }
-    let(:block)  { proc { sample } }
-    subject { block }
+  describe 'Proc' do
+    subject(:block) { proc { sample } }
 
-    it 'should have #value method' do
-      expect(subject).to respond_to(:value)
+    let(:sample) { Object.new }
+
+    it 'has #value method' do
+      expect(block).to respond_to(:value)
     end
 
-    context '#value' do
+    describe '#value' do
       subject { block.value }
 
-      it 'should return block result' do
-        expect(subject).to be === sample
+      it 'returns block result' do
+        expect(block.value).to be sample
       end
     end
 
-    context '.val' do
+    describe '.val' do
       context 'with block' do
-        subject { Proc.val(block) }
+        subject(:val) { Proc.val(block) }
 
-        it 'should evaluate block' do
-          expect(subject).to be === sample
+        it 'evaluates block' do
+          expect(val).to be sample
         end
       end
 
       context 'with object' do
-        subject { Proc.val(sample) }
+        subject(:val) { Proc.val(sample) }
 
-        it 'should evaluate block' do
-          expect(subject).to be === sample
+        it 'evaluates block' do
+          expect(val).to be sample
         end
       end
     end
