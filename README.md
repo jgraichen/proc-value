@@ -1,4 +1,8 @@
-# Proc::Value [![Gem Version](https://badge.fury.io/rb/proc-value.png)](http://badge.fury.io/rb/proc-value) [![Build Status](https://travis-ci.org/jgraichen/proc-value.png?branch=master)](https://travis-ci.org/jgraichen/proc-value) [![Coverage Status](https://coveralls.io/repos/jgraichen/proc-value/badge.png?branch=master)](https://coveralls.io/r/jgraichen/proc-value)
+# Proc::Value
+
+[![Build status](https://github.com/jgraichen/proc-value/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/jgraichen/proc-value/actions/workflows/test.yml)
+[![Gem version](https://badge.fury.io/rb/proc-value.svg)](http://badge.fury.io/rb/proc-value)
+[![codecov](https://codecov.io/gh/jgraichen/proc-value/graph/badge.svg?token=u3G6DNuskF)](https://codecov.io/gh/jgraichen/proc-value)
 
 **Proc::Value** extends Ruby Objects with a Smalltalk like `#value` method that always returns the object except when called on a block. In this case the block will be evaluated and the result returned. This allows the transparent exchange of static object with lazy evaluated blocks e.g. for configuration classes.
 
@@ -26,15 +30,21 @@ config2.path # Same code. No extra if statement needed.
 
 Add this line to your application's Gemfile:
 
-    gem 'proc-value'
+```ruby
+gem 'proc-value'
+```
 
 And then execute:
 
-    $ bundle
+```console
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install proc-value
+```console
+gem install proc-value
+```
 
 ## Usage
 
