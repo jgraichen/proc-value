@@ -1,8 +1,8 @@
 # Proc::Value
 
-[![Build status](https://github.com/jgraichen/proc-value/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/jgraichen/proc-value/actions/workflows/test.yml)
-[![Gem version](https://badge.fury.io/rb/proc-value.svg)](http://badge.fury.io/rb/proc-value)
-[![codecov](https://codecov.io/gh/jgraichen/proc-value/graph/badge.svg?token=u3G6DNuskF)](https://codecov.io/gh/jgraichen/proc-value)
+[![Gem Version](https://img.shields.io/gem/v/proc-value?logo=ruby)](http://badge.fury.io/rb/proc-value)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jgraichen/proc-value/test.yml?logo=github)](https://github.com/jgraichen/proc-value/actions/workflows/test.yml)
+[![Code Coverage](https://img.shields.io/codecov/c/gh/jgraichen/proc-value?logo=codecov)](https://codecov.io/gh/jgraichen/proc-value)
 
 **Proc::Value** extends Ruby Objects with a Smalltalk like `#value` method that always returns the object except when called on a block. In this case the block will be evaluated and the result returned. This allows the transparent exchange of static object with lazy evaluated blocks e.g. for configuration classes.
 
