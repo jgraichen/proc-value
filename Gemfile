@@ -10,7 +10,6 @@ gem 'rake-release'
 
 gem 'rspec'
 
-gem 'codecov', require: false
 gem 'simplecov', require: false
 
 gem 'rubocop-config', github: 'jgraichen/rubocop-config', ref: 'v11', require: false

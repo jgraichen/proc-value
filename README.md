@@ -1,6 +1,6 @@
 # Proc::Value
 
-[![Gem Version](https://img.shields.io/gem/v/proc-value?logo=ruby)](http://badge.fury.io/rb/proc-value)
+[![Gem Version](https://img.shields.io/gem/v/proc-value?logo=ruby)](https://rubygems.org/gems/proc-value)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/jgraichen/proc-value/test.yml?logo=github)](https://github.com/jgraichen/proc-value/actions/workflows/test.yml)
 [![Code Coverage](https://img.shields.io/codecov/c/gh/jgraichen/proc-value?logo=codecov)](https://codecov.io/gh/jgraichen/proc-value)
 
