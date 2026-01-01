@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'proc-value'
-  spec.version       = '1.0'
+  spec.version       = '1.0.1'
   spec.authors       = ['Jan Graichen']
   spec.email         = ['jgraichen@altimos.de']
   spec.description   = 'Proc::Value allows transparent block evaluation on all objects using #value method.'
