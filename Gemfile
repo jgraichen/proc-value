@@ -12,4 +12,4 @@ gem 'rspec'
 
 gem 'simplecov', require: false
 
-gem 'rubocop-config', github: 'jgraichen/rubocop-config', ref: 'bf0c16566ede884313f06ff8998dae37a00d92d7', require: false
+gem 'rubocop-config', github: 'jgraichen/rubocop-config', ref: '548e6d922b8b31d25e8a20b080ebaa894b1a7d6d', require: false
